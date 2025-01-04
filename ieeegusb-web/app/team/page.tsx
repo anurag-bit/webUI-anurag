@@ -26,11 +26,11 @@ const PatronSection: TeamSection = {
 const SBTeam: TeamSection = {
   title: "Student Branch (SB) Team",
   members: [
-    { name: "Emily Davis", role: "Chairperson", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Michael Chen", role: "Vice Chairperson", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Sarah Khan", role: "Secretary", image: "/placeholder.svg?height=200&width=200" },
-    { name: "David Lee", role: "Tech Lead", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Olivia Wang", role: "Treasurer", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Shubhranshu Shekhar Dash", role: "Chairperson", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Anurag Kumar Singh", role: "Vice Chairperson", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Rashi Bajpai", role: "Secretary", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Manas Saxena", role: "Tech Lead", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Siddhaeth Agrawal", role: "Treasurer", image: "/placeholder.svg?height=200&width=200" },
   ]
 };
 
