@@ -19,9 +19,22 @@ const navItems = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed w-full z-50 bg-white shadow-lg">
+    // <nav className="fixed w-full z-50 bg-white shadow-lg">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/70 backdrop-blur-md shadow-lg" : "bg-transparent" 
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -39,7 +52,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-black font-bold hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  className="text-blue-900 font-bold hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                 >
                   {item.name}
                 </Link>
